@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Oficina 6fre | Hardware e Software, Praia do Tofo</title>
+<meta name="description" content="Oficina 6fre na Praia do Tofo, Inhambane. Reparação de telemóveis, computadores, hardware e software. Consulte acessórios e peça um orçamento pelo WhatsApp.">
+<meta name="theme-color" content="#12376b">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_MZ">
+<meta property="og:site_name" content="Oficina 6fre">
+<meta property="og:title" content="Oficina 6fre | Hardware e Software">
+<meta property="og:description" content="Reparação de telemóveis e computadores na Praia do Tofo. Fale connosco pelo WhatsApp.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff;--alt:#f3e9d6;--ink:#14233b;--muted:#4a5a73;--hero:#12376b;--blue:#12376b;--accent:#2f6fd0;
+  --beige:#efe3cf;--line:#d9c9a8;--card:#ffffff;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0c1930;--alt:#112240;--ink:#f3ead9;--muted:#b7c0d0;--hero:#0f2b57;--blue:#8fb8ff;--accent:#8fb8ff;--line:#2a3f63;--card:#15294a;color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#0c1930;--alt:#112240;--ink:#f3ead9;--muted:#b7c0d0;--hero:#0f2b57;--blue:#8fb8ff;--accent:#8fb8ff;--line:#2a3f63;--card:#15294a;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth;background:var(--hero)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Montserrat",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;font-size:1rem;line-height:1.65}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{width:min(1080px,100% - 2.5rem);margin-inline:auto}
+
+/* Hero */
+.hero{background:var(--hero);color:#fff;position:relative;overflow:hidden}
+.hero svg{position:absolute;right:-40px;top:0;height:100%;width:min(680px,100%);opacity:.9;pointer-events:none}
+.hero .wrap{position:relative}
+header{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.25rem 0;flex-wrap:wrap}
+.brand{font-weight:800;font-size:1.15rem;letter-spacing:.01em;text-decoration:none;color:var(--beige)}
+nav{display:flex;gap:1.1rem;font-weight:500;font-size:.92rem;flex-wrap:wrap}
+nav a{text-decoration:none;color:#fff;padding:.25rem 0;border-bottom:2px solid transparent}
+nav a:hover{border-color:var(--beige)}
+.hero-body{padding:clamp(3rem,9vw,6.5rem) 0 clamp(3.5rem,9vw,6.5rem);max-width:640px}
+h1{font-weight:800;font-size:clamp(2.2rem,6.2vw,3.9rem);line-height:1.08;margin:0 0 1.25rem;letter-spacing:-.02em}
+.lead{font-size:1.1rem;color:#dbe6f7;margin:0 0 1.75rem;max-width:34rem}
+.rating{display:inline-flex;align-items:center;gap:.7rem;background:rgba(255,255,255,.1);border:1px solid rgba(239,227,207,.35);border-radius:999px;padding:.4rem 1rem .4rem .5rem;font-size:.9rem;margin-bottom:2rem}
+.rating b{background:var(--beige);color:#12376b;border-radius:999px;padding:.1rem .7rem;font-weight:800}
+.stars{color:#f1c96a;letter-spacing:.1em}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem}
+.btn{display:inline-block;font-weight:600;font-size:.98rem;text-decoration:none;padding:.85rem 1.5rem;border-radius:10px;border:2px solid var(--beige);transition:background .15s,color .15s}
+.btn.primary{background:var(--beige);color:#12376b}
+.btn.primary:hover{background:#fff;border-color:#fff}
+.btn.ghost{color:#fff}
+.btn.ghost:hover{background:rgba(255,255,255,.12)}
+
+/* Sections */
+section{padding:clamp(3rem,7vw,5.5rem) 0}
+.alt{background:var(--alt)}
+h2{font-weight:800;font-size:clamp(1.6rem,3.8vw,2.3rem);line-height:1.15;margin:0 0 .6rem;letter-spacing:-.01em;color:var(--blue)}
+.sub{color:var(--muted);margin:0 0 2.5rem;max-width:34rem}
+
+.services{display:grid;grid-template-columns:repeat(2,1fr);gap:0 3rem}
+.svc{padding:1.4rem 0 1.4rem 1.25rem;border-left:4px solid var(--accent);margin-bottom:.6rem}
+.svc h3{margin:0 0 .3rem;font-size:1.1rem;font-weight:600}
+.svc p{margin:0;color:var(--muted);font-size:.96rem}
+
+.reviews{display:grid;grid-template-columns:240px 1fr;gap:3rem;align-items:start}
+.score{font-weight:800;font-size:5rem;line-height:1;color:var(--blue);margin:0}
+.score-meta{margin:.4rem 0 0;color:var(--muted);font-size:.95rem}
+.quotes{display:grid;gap:1.25rem}
+blockquote{margin:0;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.4rem 1.5rem}
+blockquote p{margin:0 0 .9rem;font-size:1.05rem;font-weight:500}
+blockquote footer{font-size:.88rem;color:var(--muted)}
+blockquote footer strong{color:var(--ink);font-weight:600}
+.reply{margin-top:.9rem;padding:.6rem .9rem;background:var(--alt);border-radius:8px;font-size:.88rem;color:var(--muted)}
+.reply b{color:var(--blue);font-weight:600}
+
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+dl{margin:0}
+dt{font-weight:600;color:var(--blue);margin-top:1.3rem}
+dt:first-child{margin-top:0}
+dd{margin:.15rem 0 0}
+.plus{display:inline-block;background:var(--alt);border:1px solid var(--line);border-radius:6px;padding:.05rem .5rem;font-weight:600;font-size:.92rem}
+.cta-box{background:var(--hero);color:#fff;border-radius:18px;padding:2rem}
+.cta-box h3{margin:0 0 .5rem;font-size:1.35rem;font-weight:800;color:var(--beige)}
+.cta-box p{margin:0 0 1.5rem;color:#dbe6f7}
+.cta-box .btns{flex-direction:column}
+.cta-box .btn{text-align:center}
+
+footer.site{background:var(--hero);color:#dbe6f7;padding:1.6rem 0;font-size:.88rem}
+footer.site .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+
+.art{display:block;width:100%;height:auto;background:var(--alt);padding:.9rem;stroke-width:3}
+.o{fill:none;stroke:var(--blue);stroke-linecap:round;stroke-linejoin:round}
+.oa{fill:none;stroke:var(--accent);stroke-linecap:round;stroke-linejoin:round}
+.f{fill:var(--blue)}
+.sc{fill:var(--card);stroke:var(--blue);stroke-linejoin:round}
+.dk{fill:#12376b;stroke:var(--blue)}
+.be{fill:#e7d8bb}
+.bs{fill:#2f6fd0}
+.ac{fill:none;stroke:var(--accent);stroke-linecap:round;stroke-linejoin:round;stroke-width:3}
+.w{fill:#fff}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
+.item{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.tx{padding:1rem 1.1rem 1.2rem;display:flex;flex-direction:column;gap:.3rem;flex:1}
+.item h3{margin:0;font-size:1rem;font-weight:600}
+.item p{margin:0;font-size:.88rem;color:var(--muted)}
+.tag{align-self:flex-start;background:var(--beige);color:#12376b;font-size:.75rem;font-weight:600;border-radius:999px;padding:.05rem .7rem}
+.ask{margin-top:auto;padding-top:.8rem;font-weight:600;font-size:.9rem;color:var(--blue);text-decoration:none}
+.ask:hover{text-decoration:underline}
+.btn.solid{background:var(--blue);color:var(--bg);border-color:var(--blue);margin-top:1.4rem}
+.btn.solid:hover{opacity:.9}
+@media (max-width:980px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:760px){nav{gap:.7rem;font-size:.84rem}}
+@media (max-width:760px){
+  .services,.reviews,.contact{grid-template-columns:1fr}
+  .reviews{gap:1.75rem}
+  .hero svg{opacity:.35}
+  .score{font-size:4rem}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ElectronicsStore",
+  "name": "Oficina 6fre",
+  "description": "Reparação de telemóveis, computadores, hardware e software, e venda de acessórios eletrónicos.",
+  "telephone": "+258876064148",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Estrada N242, Praia do Tofo",
+    "addressLocality": "Praia do Tofo",
+    "addressRegion": "Inhambane",
+    "addressCountry": "MZ"
+  }
+}
+</script>
+</head>
+<body>
+
+<div class="hero">
+  <svg viewBox="0 0 680 560" fill="none" stroke="#efe3cf" stroke-width="2" stroke-linecap="round" aria-hidden="true" preserveAspectRatio="xMaxYMid slice">
+    <g opacity=".28">
+      <path d="M680 70H520l-50 50v90h-90"/>
+      <path d="M680 150H600l-40 40v120"/>
+      <path d="M680 250h-60l-50 50v100H430l-40 40v60"/>
+      <path d="M680 420h-90l-30 30v110"/>
+      <path d="M470 120V40h-70"/>
+      <path d="M560 310H460"/>
+    </g>
+    <g fill="#12376b" stroke-width="2.5" opacity=".9">
+      <circle cx="380" cy="210" r="8"/><circle cx="560" cy="190" r="8"/><circle cx="460" cy="310" r="8"/>
+      <circle cx="390" cy="500" r="8"/><circle cx="400" cy="40" r="8"/><circle cx="560" cy="450" r="8"/>
+    </g>
+    <rect x="500" y="215" width="90" height="70" rx="8" fill="#12376b" stroke-width="2.5"/>
+    <path d="M520 235h50M520 250h50M520 265h30" opacity=".5"/>
+  </svg>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="#topo">Oficina 6fre</a>
+      <nav aria-label="Principal">
+        <a href="#servicos">Serviços</a>
+        <a href="#loja">Loja</a>
+        <a href="#avaliacoes">Avaliações</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+    <div class="hero-body" id="topo">
+      <p class="rating"><b>5,0</b><span class="stars" aria-hidden="true">★★★★★</span><span>3 críticas no Google Maps</span></p>
+      <h1>Hardware e software tratados com cuidado.</h1>
+      <p class="lead">Oficina de eletrónicos na Praia do Tofo, Inhambane. Reparamos o seu equipamento e vendemos acessórios, com diagnóstico claro e um preço que faz sentido.</p>
+      <div class="btns">
+        <a class="btn primary" href="https://wa.me/258876064148?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">Falar no WhatsApp</a>
+        <a class="btn ghost" href="tel:+258876064148">Ligar para 87 606 4148</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main>
+  <section id="servicos">
+    <div class="wrap">
+      <h2>O que fazemos na oficina</h2>
+      <p class="sub">Da avaria ao equipamento a funcionar de novo, tudo no mesmo sítio.</p>
+      <div class="services">
+        <div class="svc"><h3>Reparação de telemóveis</h3><p>Diagnóstico e reparação de problemas de funcionamento, para o seu telemóvel voltar a dar conta do recado.</p></div>
+        <div class="svc"><h3>Hardware</h3><p>Avaliação de avarias e substituição de componentes em equipamentos eletrónicos e computadores.</p></div>
+        <div class="svc"><h3>Software</h3><p>Instalação, atualização e resolução de falhas de sistema e aplicações.</p></div>
+        <div class="svc"><h3>Orçamento antes de começar</h3><p>Explicamos o problema e o preço antes de mexer no equipamento.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="casos">
+    <div class="wrap">
+      <h2>Avarias que resolvemos</h2>
+      <p class="sub">Se o seu equipamento tem um destes sintomas, traga-o à oficina.</p>
+      <div class="grid">
+        <article class="item">
+          <svg class="art" viewBox="0 0 200 140" aria-hidden="true"><rect class="sc" x="68" y="8" width="64" height="124" rx="11"/><rect class="f" x="92" y="15" width="16" height="3" rx="1.5"/><path class="o" stroke-width="2" d="M100 20 L91 52 L111 70 L95 98 L106 126 M91 52 L72 58 M111 70 L128 64 M95 98 L76 108"/></svg>
+          <div class="tx"><h3>Ecrã partido</h3><p>Avaliação de danos e troca de ecrã do telemóvel.</p></div>
+        </article>
+        <article class="item">
+          <svg class="art" viewBox="0 0 200 140" aria-hidden="true"><rect class="dk" x="68" y="8" width="64" height="124" rx="11"/><rect x="82" y="58" width="32" height="18" rx="3" fill="none" stroke="#efe3cf" stroke-width="2.5"/><rect x="85" y="62" width="6" height="10" rx="1" fill="#efe3cf"/><rect x="115" y="64" width="3" height="6" fill="#efe3cf"/></svg>
+          <div class="tx"><h3>Telemóvel que não liga</h3><p>Verificamos bateria, porta de carga e placa.</p></div>
+        </article>
+        <article class="item">
+          <svg class="art" viewBox="0 0 200 140" aria-hidden="true"><rect class="sc" x="34" y="14" width="132" height="86" rx="7"/><rect class="bs" x="42" y="22" width="116" height="70" rx="2"/><text class="w" x="52" y="56" font-family="Montserrat,Arial,sans-serif" font-size="30" font-weight="800">:(</text><rect class="w" x="52" y="66" width="74" height="4" rx="2"/><rect class="w" x="52" y="76" width="50" height="4" rx="2"/><path class="f" d="M16 104 H184 L174 120 H26 Z"/></svg>
+          <div class="tx"><h3>Falha de sistema</h3><p>Erros, ecrã azul e arranque lento em portáteis e PC.</p></div>
+        </article>
+        <article class="item">
+          <svg class="art" viewBox="0 0 200 140" aria-hidden="true"><rect class="sc" x="16" y="12" width="56" height="116" rx="7"/><rect class="f" x="26" y="26" width="36" height="6" rx="2"/><rect class="f" x="26" y="38" width="36" height="6" rx="2"/><circle class="o" cx="44" cy="100" r="9"/><path class="o" d="M44 94 v6"/><rect class="sc" x="94" y="30" width="92" height="64" rx="5"/><path class="o" d="M140 44 L156 74 H124 Z"/><path class="o" d="M140 54 v10"/><circle class="f" cx="140" cy="69" r="2"/><rect class="f" x="134" y="94" width="12" height="14"/><rect class="f" x="118" y="108" width="44" height="7" rx="3"/></svg>
+          <div class="tx"><h3>PC que não arranca</h3><p>Diagnóstico de componentes e reinstalação do sistema.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="loja">
+    <div class="wrap">
+      <h2>Loja de acessórios e equipamento</h2>
+      <p class="sub">Carregadores, leds, monitores, portáteis e telemóveis usados e acessórios para PC. O stock varia, por isso pergunte pela disponibilidade.</p>
+      <div class="grid">
+        <article class="item">
+          <svg class="art" viewBox="0 0 160 110" aria-hidden="true"><rect class="f" x="52" y="12" width="6" height="12"/><rect class="f" x="70" y="12" width="6" height="12"/><rect class="sc" x="36" y="24" width="56" height="50" rx="9"/><path class="ac" d="M68 33 l-10 17 h9 l-4 15 l14 -19 h-9 z"/><path class="o" d="M64 74 v10 q0 14 16 14 h30"/><rect class="f" x="112" y="91" width="24" height="14" rx="3"/></svg>
+          <div class="tx"><h3>Carregadores e cabos</h3><p>Carregadores de parede e cabos para telemóveis e outros aparelhos.</p><a class="ask" data-item="Carregadores e cabos" href="https://wa.me/258876064148" target="_blank" rel="noopener">Perguntar preço</a></div>
+        </article>
+        <article class="item">
+          <svg class="art" viewBox="0 0 160 110" aria-hidden="true"><circle class="sc" cx="80" cy="44" r="27"/><path class="oa" d="M70 52 l5 -12 l5 12 l5 -12 l5 12"/><rect class="f" x="67" y="70" width="26" height="22" rx="4"/><rect class="f" x="72" y="95" width="16" height="7" rx="3.5"/><path class="oa" d="M80 6 v6 M44 18 l5 5 M116 18 l-5 5 M34 44 h6 M126 44 h-6"/></svg>
+          <div class="tx"><h3>Leds</h3><p>Lâmpadas e iluminação LED para casa e comércio.</p><a class="ask" data-item="Leds" href="https://wa.me/258876064148" target="_blank" rel="noopener">Perguntar preço</a></div>
+        </article>
+        <article class="item">
+          <svg class="art" viewBox="0 0 160 110" aria-hidden="true"><rect class="sc" x="22" y="10" width="116" height="68" rx="6"/><rect class="be" x="30" y="18" width="100" height="52" rx="2"/><path class="oa" d="M40 60 l18 -16 l16 9 l24 -24 l20 12"/><rect class="f" x="72" y="78" width="16" height="14"/><rect class="f" x="52" y="92" width="56" height="8" rx="4"/></svg>
+          <div class="tx"><h3>Monitores</h3><p>Monitores de imagem para computador.</p><a class="ask" data-item="Monitores" href="https://wa.me/258876064148" target="_blank" rel="noopener">Perguntar preço</a></div>
+        </article>
+        <article class="item">
+          <svg class="art" viewBox="0 0 160 110" aria-hidden="true"><rect class="sc" x="30" y="12" width="100" height="64" rx="6"/><rect class="be" x="38" y="20" width="84" height="48" rx="2"/><path class="f" d="M12 80 H148 L140 96 H20 Z"/></svg>
+          <div class="tx"><span class="tag">Usado</span><h3>Portáteis usados</h3><p>Computadores portáteis para trabalho e estudo.</p><a class="ask" data-item="Portáteis usados" href="https://wa.me/258876064148" target="_blank" rel="noopener">Perguntar preço</a></div>
+        </article>
+        <article class="item">
+          <svg class="art" viewBox="0 0 160 110" aria-hidden="true"><rect class="sc" x="52" y="6" width="56" height="98" rx="10"/><rect class="be" x="59" y="18" width="42" height="70" rx="3"/><circle class="f" cx="80" cy="12" r="2"/><rect class="f" x="72" y="93" width="16" height="3" rx="1.5"/></svg>
+          <div class="tx"><span class="tag">Usado</span><h3>Telemóveis usados</h3><p>Pergunte pelos modelos disponíveis.</p><a class="ask" data-item="Telemóveis usados" href="https://wa.me/258876064148" target="_blank" rel="noopener">Perguntar preço</a></div>
+        </article>
+        <article class="item">
+          <svg class="art" viewBox="0 0 160 110" aria-hidden="true"><rect class="sc" x="10" y="36" width="100" height="50" rx="7"/><path class="o" stroke-width="4" stroke-dasharray="7 5" d="M22 50 h76 M22 61 h76 M22 72 h50"/><rect class="sc" x="122" y="30" width="28" height="48" rx="14"/><path class="o" stroke-width="2" d="M136 30 v18 M122 48 h28"/></svg>
+          <div class="tx"><h3>Teclados e ratos</h3><p>Teclados e ratos para o seu PC.</p><a class="ask" data-item="Teclados e ratos" href="https://wa.me/258876064148" target="_blank" rel="noopener">Perguntar preço</a></div>
+        </article>
+        <article class="item">
+          <svg class="art" viewBox="0 0 160 110" aria-hidden="true"><rect class="sc" x="12" y="26" width="136" height="52" rx="4"/><rect class="f" x="24" y="39" width="22" height="26" rx="2"/><rect class="f" x="52" y="39" width="22" height="26" rx="2"/><rect class="f" x="80" y="39" width="22" height="26" rx="2"/><rect class="f" x="108" y="39" width="26" height="26" rx="2"/><path class="oa" stroke-width="5" stroke-dasharray="4 3" d="M16 86 h128"/></svg>
+          <div class="tx"><h3>Memórias e discos</h3><p>Memória RAM, discos e outros componentes.</p><a class="ask" data-item="Memórias e discos" href="https://wa.me/258876064148" target="_blank" rel="noopener">Perguntar preço</a></div>
+        </article>
+        <article class="item">
+          <svg class="art" viewBox="0 0 160 110" aria-hidden="true"><path class="o" stroke-width="4" d="M24 76 C54 76 54 34 80 34 S106 76 136 76"/><rect class="f" x="8" y="68" width="18" height="16" rx="2"/><rect class="f" x="134" y="68" width="18" height="16" rx="2"/><path class="oa" stroke-width="2.5" d="M14 62 v6 M20 62 v6 M140 62 v6 M146 62 v6"/></svg>
+          <div class="tx"><h3>Cabos e adaptadores</h3><p>HDMI, USB e adaptadores para ligar tudo.</p><a class="ask" data-item="Cabos e adaptadores" href="https://wa.me/258876064148" target="_blank" rel="noopener">Perguntar preço</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="avaliacoes">
+    <div class="wrap reviews">
+      <div>
+        <h2>O que dizem os clientes</h2>
+        <p class="score">5,0</p>
+        <p class="stars" aria-hidden="true">★★★★★</p>
+        <p class="score-meta">Nota média com base em 3 críticas no Google Maps.</p>
+        <a class="btn solid" href="https://www.google.com/maps/search/?api=1&query=4GVH%2BJG+Praia+Tofo" target="_blank" rel="noopener">Escrever uma crítica</a>
+      </div>
+      <div class="quotes">
+        <blockquote>
+          <p>“Trabalho de qualidade e confiança, recomendo.”</p>
+          <footer><strong>Mano Guambe</strong>, há um mês</footer>
+          <div class="reply"><b>Resposta do proprietário:</b> Obrigado</div>
+        </blockquote>
+        <blockquote>
+          <p>“Esse é bom técnico, ele recomendou meu celular e já está funcionando muito bem, com um bom preço.”</p>
+          <footer><strong>Ivone Gove</strong>, há 9 meses</footer>
+          <div class="reply"><b>Resposta do proprietário:</b> Obrigado</div>
+        </blockquote>
+        <blockquote>
+          <p>Avaliou a oficina com 5 estrelas, sem comentário.</p>
+          <footer><strong>Jose Henrique</strong>, há 2 semanas</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="wrap contact">
+      <div>
+        <h2>Visite a oficina</h2>
+        <p class="sub">Estamos na estrada N242, na Praia do Tofo.</p>
+        <dl>
+          <dt>Morada</dt>
+          <dd>N242, Inhambane<br>Praia do Tofo</dd>
+          <dt>Código Plus</dt>
+          <dd><span class="plus">4GVH+JG</span> Praia Tofo</dd>
+          <dt>Telefone</dt>
+          <dd><a href="tel:+258876064148">87 606 4148</a></dd>
+          <dt>Horário</dt>
+          <dd>Abre às 09:00</dd>
+        </dl>
+      </div>
+      <div class="cta-box">
+        <h3>Tem um equipamento com problema?</h3>
+        <p>Envie uma mensagem com o modelo e a avaria. Respondemos assim que possível.</p>
+        <div class="btns">
+          <a class="btn primary" href="https://wa.me/258876064148?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">Falar no WhatsApp</a>
+          <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=4GVH%2BJG+Praia+Tofo" target="_blank" rel="noopener">Como chegar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>Oficina 6fre hardware e software</span>
+    <span>N242, Inhambane, Moçambique</span>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.ask').forEach(function(a){
+  a.href='https://wa.me/258876064148?text='+encodeURIComponent('Olá, gostaria de saber o preço de: '+a.dataset.item);
+});
+</script>
+</body>
+</html>
